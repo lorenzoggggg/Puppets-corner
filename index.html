@@ -38,16 +38,21 @@
         </div>
     </nav>
     <main>
-        <img src="assets/images/sleepymona.GIF" id="mona">
+        <audio id="meow" src="./assets/audio/meow.mp3" preload="auto"></audio>
+        <img src="assets/images/sleepymona.GIF" id="mona" onclick="meowClick()">
         <leftwindows id="leftwindows">
             <img src="assets/images/window3.PNG" id="playing">
             <img src="assets/images/window1.PNG" id="playlist">
         </leftwindows>
-        <righttwindows id="rightwindows">
-            <img src="assets/images/window1.PNG" id="guestbook">
+        <righttwindows id="bookContainer">
+            <div class="guestbook-wrapper"></div>
+                <img src="assets/images/window1.PNG" id="guestbook">
+                <div class="bookTitle">Guestbook</div>
+            </div>
         </rightwindows>
         <div id="waver">
-            <img src="assets/images/himeow.GIF" id="wave">
+            <audio id="yahoo" src="./assets/audio/webkinz yoohoo.mp3" preload="auto"></audio>
+            <img src="assets/images/himeow.GIF" id="wave" onclick="yahooClick()">
         </div>
         <div id="maintxt">
             <p id="hithere">Hi there!!!!!</p>
@@ -55,7 +60,7 @@
                 Feel free to sign the guest book or introduce yourself! For any inquires go to the links section at the top.<br/> 
                 Feel free to check out my webcomics and my shop if you'd like to support the work I do! Enjoy your stay!</p>
         </div>
-        <script src="./indexjs.js"></script>
     </main>
+    <script src="./indexjs.js"></script>
 </body>
 </html>

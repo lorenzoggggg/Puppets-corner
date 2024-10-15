@@ -29,6 +29,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
+    animation: logoSpin 1s ease-in-out forwards;
 }
 
 .image-container {
@@ -52,14 +53,30 @@ header {
     cursor: pointer; 
 }
 
-#rightwindows {
+#bookContainer {
     position: relative;
     right: -80%;
 }
 
+.guestbook-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 #guestbook {
-    position: absolute;
-    top: 500%
+    height: auto;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.bookTitle {
+    position: relative; 
+    font-family: 'runescape';
+    font-size: 25px;
+    color: #ffff00;
+    padding-top: -20%;
+    transform: translate(11%, -910%);
 }
 
 #leftwindows {
@@ -70,11 +87,13 @@ header {
 #playing {
     position: absolute;
     top: 10%;
+    animation: windowBob 4s ease-in-out infinite;
 }
 
 #playlist {
     position: absolute;
     top: 1700%;
+    animation: windowBob 3s ease-in-out infinite;
 }
 
 #mona {
@@ -95,7 +114,7 @@ header {
 
 #hithere {
     position: absolute;
-    padding-top: 3%;
+    top: -100%;
     left: -50%;
     font-family: 'runescape';
     font-size: 50px;
@@ -104,8 +123,8 @@ header {
 
 #intro {
     position: absolute;
+    top: -60%;
     left: -65%;
-    padding-top: 10%;
     font-family: 'runescape';
     font-size: 25px;
     color: #3b3b3b;
@@ -118,4 +137,16 @@ header {
 #wave {
     position: absolute;
     left: -50%;
+    transform: translateY(-165%) ;
+}
+
+@keyframes logoSpin {
+    0% { opacity: 0; transform: rotate(180deg); }
+    100% { opacity: 1; transform: rotate(0deg); }
+}
+
+@keyframes windowBob {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }

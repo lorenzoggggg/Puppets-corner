@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    background-image: url("assets/images/background.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    max-width: 1500px;
+    min-height: 720px;
+    background-color: #859355;
+    background-image: url("assets/images/greenbg2.JPG");
+    background-size: cover;
+    border-radius: 0.5em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoFloat {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    animation: logoSpin 1s ease-in-out forwards;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.image-container a {
+    display: inline-flex;
+    margin: 0 3px;
+    padding: 0;
+    text-decoration: none;
+}
+
+.image-container img:hover {
+    box-shadow: 0 0 10px 5px #ffdede,
+                0 0 10px 5px #ff008a,
+                5px 5px 5px #ff0000;
+    cursor: pointer; 
+}
+
+#bookContainer {
+    position: relative;
+    right: -80%;
+}
+
+.guestbook-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#guestbook {
+    height: auto;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.bookTitle {
+    position: relative; 
+    font-family: 'runescape';
+    font-size: 25px;
+    color: #ffff00;
+    padding-top: -20%;
+    transform: translate(11%, -910%);
+}
+
+#leftwindows {
+    position: relative;
+    left: -20%;
+}
+
+#playing {
+    position: absolute;
+    top: 10%;
+    animation: windowBob 4s ease-in-out infinite;
+}
+
+#playlist {
+    position: absolute;
+    top: 1700%;
+    animation: windowBob 3s ease-in-out infinite;
+}
+
+#mona {
+    position: relative;
+    margin-top: -5.5%;
+    margin-left: -4%;
+}
+
+#maintxt {
+    position: relative;
+    padding-top: 15%;
+}
+
+@font-face {
+    font-family: 'runescape';
+    src: url("assets/fonts/runescape.woff");
+}
+
+#hithere {
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    font-family: 'runescape';
+    font-size: 50px;
+    color: #3b3b3b;
+}
+
+#intro {
+    position: absolute;
+    top: -60%;
+    left: -65%;
+    font-family: 'runescape';
+    font-size: 25px;
+    color: #3b3b3b;
+}
+
+#waver {
+    position: relative;
+}
+
+#wave {
+    position: absolute;
+    left: -50%;
+    transform: translateY(-165%) ;
+}
+
+@keyframes logoSpin {
+    0% { opacity: 0; transform: rotate(180deg); scale: 0.5;}
+    100% { opacity: 1; transform: rotate(0deg); scale: 1}
+}
+
+@keyframes windowBob {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}

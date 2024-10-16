@@ -5,6 +5,7 @@ html {
     background-image: url("assets/images/background.PNG");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 main {
@@ -70,7 +71,7 @@ header {
     padding-top: 5%;
 }
 
-.bookTitle {
+#bookTitle {
     position: relative; 
     font-family: 'runescape';
     font-size: 25px;
@@ -123,7 +124,7 @@ header {
 
 #intro {
     position: absolute;
-    top: -60%;
+    top: -55%;
     left: -65%;
     font-family: 'runescape';
     font-size: 25px;
@@ -138,6 +139,37 @@ header {
     position: absolute;
     left: -50%;
     transform: translateY(-165%) ;
+}
+
+#langIcons {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-right: 0%;
+}
+
+#eng {
+    position: absolute;
+    width: 5%;
+    padding-right: 190%;
+    animation: windowBob 3s ease-in-out infinite;
+}
+
+#fr {
+    position: absolute;
+    width: 5%;
+    padding-right: 165%;
+    animation: windowBob 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+#esp {
+    position: absolute;
+    width: 5%;
+    padding-right: 140%;
+    animation: windowBob 3s ease-in-out infinite;
+    animation-delay: 2s;
 }
 
 @keyframes logoSpin {

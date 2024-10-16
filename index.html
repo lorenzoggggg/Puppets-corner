@@ -16,7 +16,7 @@
 
 <body>
     <header id="header">
-        <img src="assets/images/floatinglogo.GIF" id="logoFloat">
+        <img src="assets/images/floatinglogo.GIF" id="logoFloat" onclick="logoClick()">
     </header>
     <nav id="navBar">
         <div class="image-container">
@@ -47,7 +47,7 @@
         <righttwindows id="bookContainer">
             <div class="guestbook-wrapper"></div>
                 <img src="assets/images/window1.PNG" id="guestbook">
-                <div class="bookTitle">Guestbook</div>
+                <div id="bookTitle">Guestbook</div>
             </div>
         </rightwindows>
         <div id="waver">
@@ -57,8 +57,13 @@
         <div id="maintxt">
             <p id="hithere">Hi there!!!!!</p>
             <p id="intro">I'm puppet/puppetizer/pupp3t1z3r, an artist that loves outdated memes and cats! ! !<br/>welcome to my website! ! Have fun looking around!<br/>
-                Feel free to sign the guest book or introduce yourself! For any inquires go to the links section at the top.<br/> 
+                Feel free to sign the guest book or introduce yourself! For any inquiries go to the links section at the top.<br/> 
                 Feel free to check out my webcomics and my shop if you'd like to support the work I do! Enjoy your stay!</p>
+        </div>
+        <div id="langIcons">
+            <img src="assets/images/uk.png" id="eng" onclick="langEng()">
+            <img src="assets/images/france.png" id="fr" onclick="langFr()">
+            <img src="assets/images/spain.png" id="esp" onclick="langEsp()">
         </div>
     </main>
     <script src="./indexjs.js"></script>

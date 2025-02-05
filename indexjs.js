@@ -1,48 +1,136 @@
 let isEnglish = true;
 
+window.onload = function () {
+    currentSongIndex = 0;
+    song1.style.color = "purple"
+};
+
 function yahooClick() {
     var yahoo = document.getElementById("yahoo");
     yahoo.play();
 }
 
-function langEng() {
-    var intro = document.getElementById("intro");
-    var hi = document.getElementById("hithere");
-    var book = document.getElementById("bookTitle");
-    var englishText = "I'm puppet/puppetizer/pupp3t1z3r, an artist that loves outdated memes and cats! ! !<br/>welcome to my website! ! Have fun looking around!<br/>Feel free to sign the guest book or introduce yourself! For any inquiries go to the links section at the top.<br/>Feel free to check out my webcomics and my shop if you'd like to support the work I do! Enjoy your stay!";
-    intro.innerHTML = englishText;
-    hi.innerText = "Hi there!!!!!";
-    book.innerText = "Guestbook";
-}
-
-function langFr() {
-    var intro = document.getElementById("intro");
-    var hi = document.getElementById("hithere");
-    var book = document.getElementById("bookTitle");
-    var frenchText = "Je suis puppet/puppetizer/pupp3t1z3r, un artiste qui aime les mèmes dépassés et les chats! ! !<br/>bienvenue sur mon site! ! Amusez-vous à regarder autour de vous!<br/>N’hésitez pas à signer le livre d’or ou à vous présenter! Pour toute demande de renseignements,<br/>rendez-vous dans la section liens en haut.<br/>N'hésitez pas à consulter mes webcomics et ma boutique si vous souhaitez soutenir le travail que je fais! Profitez de votre séjour!";
-    intro.innerHTML = frenchText;
-    hi.innerText = "Salut!!!!!";
-    book.innerText = "Livre d'or";
-}
-
-function langEsp() {
-    var intro = document.getElementById("intro");
-    var hi = document.getElementById("hithere");
-    var book = document.getElementById("bookTitle");
-    var SpanishText = "Soy puppet/puppetizer/pupp3t1z3r, ¡Un artista al que le encantan los memes anticuados y los gatos! ! !<br/>bienvenido a mi sitio web! ! ¡Diviértete mirando a tu alrededor!<br/>¡No dudes en firmar el libro de visitas o presentarte! Para cualquier consulta dirígete a la sección de enlaces en la parte superior.<br/>¡No dudes en visitar mis webcomics y mi tienda si quieres apoyar el trabajo que hago!<br/>¡Disfruta de tu estancia!";
-    intro.innerHTML = SpanishText;
-    hi.innerText = "¡¡¡¡¡Hola!!!!!";
-    book.innerText = "Libro de visitas";
-}
-
 function meowClick() {
     var meow = document.getElementById("meow");
     meow.play();
-    setTimeout(function() {
-    window.open("catPage.html", "_self");
-    }, 1000);
+    //setTimeout(function() {
+    //window.open("catPage.html", "_self");
+    //}, 1000);
 }
 
 function logoClick() {
     window.open("index.html", "_self");
+}
+
+const songs = ["pulsewidth", "melty", "digeridoo", "speedway", "sniping", "chris"];
+let currentSongIndex = 0;
+
+function togglePlayPause() {
+    let playbtn = document.getElementById("play");
+    let currentSong = document.getElementById(songs[currentSongIndex]);
+
+    if (currentSong.paused) {
+        currentSong.play();
+        playbtn.src = "assets/mediaPlayer/mediaplayer_pause.png";
+    } else {
+        currentSong.pause();
+        playbtn.src = "assets/mediaPlayer/mediaplayer_play.png";
+    }
+}
+
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    changeSong();
+}
+
+function previousSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    changeSong();
+}
+
+function changeSong() {
+    pauseAllSongs();
+
+    let playbtn = document.getElementById("play");
+    let currentSong = document.getElementById(songs[currentSongIndex]);
+    let trackPic = document.getElementById("trackPic");
+
+    let song1 = document.getElementById("song1")
+    let song2 = document.getElementById("song2")
+    let song3 = document.getElementById("song3")
+    let song4 = document.getElementById("song4")
+    let song5 = document.getElementById("song5")
+    let song6 = document.getElementById("song6")
+
+    currentSong.currentTime = 0;
+    currentSong.play();
+
+    playbtn.src = "assets/mediaPlayer/mediaplayer_pause.png";
+
+    const songNames = [song1, song2, song3, song4, song5, song6];
+    songNames.forEach(song => song.style.color = "#41389b");
+
+    switch (songs[currentSongIndex]) {
+        case "melty":
+            trackPic.src = "assets/images/meltyblood.jpg";
+            song2.style.color = "purple"
+            break;
+        case "digeridoo":
+            trackPic.src = "assets/images/Digeridoovinyl.jpg";
+            song3.style.color = "purple"
+            break;
+        case "speedway":
+            trackPic.src = "assets/images/stardustspeedway.jpg";
+            song4.style.color = "purple"
+            break;
+        case "sniping":
+            trackPic.src = "assets/images/raiden.jpg";
+            song5.style.color = "purple"
+            break;
+        case "chris":
+            trackPic.src = "assets/images/hedgehogboys.jpg";
+            song6.style.color = "purple"
+            break;
+        default:
+            trackPic.src = "assets/images/pulswidth.jpg";
+            song1.style.color = "purple"
+    }
+}
+
+function pauseAllSongs() {
+    let allAudios = songs.map(id => document.getElementById(id));
+    allAudios.forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+}
+
+function song1Click() {
+    currentSongIndex = 0;
+    changeSong();
+}
+
+function song2Click() {
+    currentSongIndex = 1;
+    changeSong();
+}
+
+function song3Click() {
+    currentSongIndex = 2;
+    changeSong();
+}
+
+function song4Click() {
+    currentSongIndex = 3;
+    changeSong();
+}
+
+function song5Click() {
+    currentSongIndex = 4;
+    changeSong();
+}
+
+function song6Click() {
+    currentSongIndex = 5;
+    changeSong();
 }

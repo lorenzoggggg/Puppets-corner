@@ -40,14 +40,45 @@
     <main>
         <audio id="meow" src="./assets/audio/meow.mp3" preload="auto"></audio>
         <img src="assets/images/sleepymona.GIF" id="mona" onclick="meowClick()">
+        <img src="assets/gifs/favorite1.gif" id="fav">
+        <img src="assets/gifs/bar_24.gif" id="flowerBar1">
+        <img src="assets/gifs/bar_24.gif" id="flowerBar2">
+        <songs>
+            <audio id="melty" src="assets/music/Melty Blood Good Morning One Scene.mp3" preload="auto"></audio>
+            <audio id="pulsewidth" src="assets/music/Pulsewidth.mp3" preload="auto"></audio>
+            <audio id="digeridoo" src="assets/music/Digeridoo.mp3" preload="auto"></audio>
+            <audio id="sniping" src="assets/music/Twilight Sniping.mp3" preload="auto"></audio>
+            <audio id="speedway" src="assets/music/Stardust Speedway B mix.mp3" preload="auto"></audio>
+            <audio id="chris" src="assets/music/chris.mp3" preload="auto"></audio>
+        </songs>
         <leftwindows id="leftwindows">
-            <img src="assets/images/window3.PNG" id="playing">
+            <img src="assets/images/window3.PNG" id="player">
+            <img src="assets/mediaPlayer/mediaplayer_backdrop.png" id="playing">
+            <img src="assets/mediaPlayer/mediaplayer_shine.png" id="mediaShine">
+            <img src="assets/gifs/notasindex.gif" id="notes">
             <img src="assets/images/window1.PNG" id="playlist">
+            <img src="assets/mediaPlayer/mediaplayer_progressbarback.png" id="progressBack">
+            <img src="assets/mediaPlayer/mediaplayer_progressfront.png" id="progressFront">
+            <img src="assets/mediaPlayer/mediaplayer_back.gif" id="playBack" onclick="previousSong()">
+            <img src="assets/mediaPlayer/mediaplayer_next.gif" id="playNext" onclick="nextSong()">
+            <img src="assets/mediaPlayer/mediaplayer_play.png" id="play" onclick="togglePlayPause()">
+            <img src="assets/images/pulswidth.jpg" id="trackPic">
+            <img src="assets/mediaPlayer/mediaplayer1.svg" id="kitty">
+            <img src="assets/gifs/djmaicon.gif" id="djmaicon">
+            <div id="tracks">
+                <p id="song1" onclick="song1Click()">1. Aphex Twin - Pulsewidth</p>
+                <p id="song2" onclick="song2Click()">2. Melty Blood - Good Morning</p>
+                <p id="song3" onclick="song3Click()">3. Aphex Twin - Digeridoo</p>
+                <p id="song4" onclick="song4Click()">4. Sega - Stardust Speedway</p>
+                <p id="song5" onclick="song5Click()">5. Metal Gear Solid 2 - Twilight Sniping</p>
+                <p id="song6" onclick="song6Click()">6. Chris Chan - House Tour</p>
+            </div>
         </leftwindows>
         <righttwindows id="bookContainer">
             <div class="guestbook-wrapper"></div>
                 <img src="assets/images/window1.PNG" id="guestbook">
-                <div id="bookTitle">Guestbook</div>
+                <img src="assets/gifs/whitefuzzbox.png" id="fuzzBox">
+                <img src="assets/gifs/guestbook_clr.gif" id="bookTitle">
             </div>
         </rightwindows>
         <div id="waver">
@@ -59,11 +90,6 @@
             <p id="intro">I'm puppet/puppetizer/pupp3t1z3r, an artist that loves outdated memes and cats! ! !<br/>welcome to my website! ! Have fun looking around!<br/>
                 Feel free to sign the guest book or introduce yourself! For any inquiries go to the links section at the top.<br/> 
                 Feel free to check out my webcomics and my shop if you'd like to support the work I do! Enjoy your stay!</p>
-        </div>
-        <div id="langIcons">
-            <img src="assets/images/uk.png" id="eng" onclick="langEng()">
-            <img src="assets/images/france.png" id="fr" onclick="langFr()">
-            <img src="assets/images/spain.png" id="esp" onclick="langEsp()">
         </div>
     </main>
     <script src="./indexjs.js"></script>

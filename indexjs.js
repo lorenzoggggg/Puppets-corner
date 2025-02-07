@@ -22,7 +22,7 @@ function logoClick() {
     window.open("index.html", "_self");
 }
 
-const songs = ["pulsewidth", "melty", "digeridoo", "speedway", "sniping", "chris"];
+const songs = ["pulsewidth", "poji", "ape", "pikmin", "sniping", "heart"];
 let currentSongIndex = 0;
 
 function togglePlayPause() {
@@ -71,24 +71,24 @@ function changeSong() {
     songNames.forEach(song => song.style.color = "#41389b");
 
     switch (songs[currentSongIndex]) {
-        case "melty":
-            trackPic.src = "assets/images/meltyblood.jpg";
+        case "poji":
+            trackPic.src = "assets/images/swaganime.jpg";
             song2.style.color = "purple"
             break;
-        case "digeridoo":
-            trackPic.src = "assets/images/Digeridoovinyl.jpg";
+        case "ape":
+            trackPic.src = "assets/images/apeEscape.jpg";
             song3.style.color = "purple"
             break;
-        case "speedway":
-            trackPic.src = "assets/images/stardustspeedway.jpg";
+        case "pikmin":
+            trackPic.src = "assets/images/pikmin.jpg";
             song4.style.color = "purple"
             break;
         case "sniping":
             trackPic.src = "assets/images/raiden.jpg";
             song5.style.color = "purple"
             break;
-        case "chris":
-            trackPic.src = "assets/images/hedgehogboys.jpg";
+        case "heart":
+            trackPic.src = "assets/images/klonoa.png";
             song6.style.color = "purple"
             break;
         default:

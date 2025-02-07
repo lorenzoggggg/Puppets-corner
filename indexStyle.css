@@ -6,6 +6,7 @@ html {
     background-repeat: repeat;
     background-size: 319px 309px;
     overflow-x: hidden;
+    cursor: url('assets/gifs/cursor.gif'), auto;
 }
 
 main {
@@ -27,11 +28,36 @@ header {
     justify-content: center;
 }
 
+#leafLeft {
+    height: 33%;
+    position: absolute;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+#leafRight {
+    height: 30%;
+    position: absolute;
+    margin-top: -1%;
+    margin-left: 90%;
+}
+
 #logoFloat {
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
     animation: logoSpin 1s ease-in-out forwards;
+}
+
+#gifContainer {
+    position: absolute;
+    left: 14%;
+    top: -14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 145px;
+    z-index: -1;
 }
 
 .image-container {
@@ -70,7 +96,7 @@ header {
     height: 550px;
     padding-left: 10%;
     padding-top: 5%;
-    animation: windowBob 5s ease-in-out infinite;
+    animation: windowBob 5.5s ease-in-out infinite;
 }
 
 #bookTitle {
@@ -78,7 +104,7 @@ header {
     position: absolute; 
     top: 10px;
     left: 10px;
-    animation: windowBob 5s ease-in-out infinite;
+    animation: windowBob 5.5s ease-in-out infinite;
 }
 
 #fuzzBox {
@@ -87,7 +113,7 @@ header {
     position: absolute; 
     top: 3px;
     left: 7px;
-    animation: windowBob 5s ease-in-out infinite;
+    animation: windowBob 5.5s ease-in-out infinite;
 }
 
 
@@ -106,7 +132,7 @@ header {
 
 #player {
     width: 100%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #playing {
@@ -114,15 +140,15 @@ header {
     top: 7%;
     left: 10%;
     width: 58%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #trackPic {
     position: absolute;
-    top: 9%;
+    top: 8.75%;
     left: 14%;
     width: 50%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #mediaShine {
@@ -130,53 +156,53 @@ header {
     top: 7%;
     left: 10%;
     width: 58%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #playlist {
-    width: 80%;
+    width: 90%;
     margin-top: 10px;
-    animation: windowBob 3s ease-in-out infinite;
+    animation: windowBob 4.5s ease-in-out infinite;
 }
 
 #progressBack {
     width: 50%;
     position: absolute;
-    top: 38%;
+    top: 36%;
     right: 8%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #progressFront {
     width: 47%;
     position: absolute;
-    top: 38.1%;
+    top: 36.1%;
     right: 9.75%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #playBack {
     width: 8%;
     position: absolute;
-    top: 37%;
+    top: 35%;
     left: 5%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #playNext {
     width: 8%;
     position: absolute;
-    top: 37%;
+    top: 35%;
     left: 30%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #play {
     width: 8%;
     position: absolute;
-    top: 37%;
+    top: 35%;
     left: 18%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #kitty {
@@ -184,14 +210,14 @@ header {
     position: absolute;
     top: 8%;
     left: 70%;
-    animation: windowBob 3.75s ease-in-out infinite;
+    animation: windowBob 4.5s ease-in-out infinite;
 }
 
 #djmaicon {
     position: absolute;
-    top: -12%;
+    top: -11%;
     width: 100%;
-    animation: windowBob 4s ease-in-out infinite;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #notes {
@@ -203,12 +229,20 @@ header {
 
 #tracks {
     position: absolute;
-    top: 53%;
-    left: 15%;
+    top: 51%;
+    left: 10%;
     font-family: 'runescape';
     font-size: 20px;
     color: #41389b;
-    animation: windowBob 3s ease-in-out infinite;
+    animation: windowBob 4.5s ease-in-out infinite;
+}
+
+#speaker {
+    position: absolute;
+    top: 1.5%;
+    left: 5%;
+    width: 20%;
+    animation: windowBob 5s ease-in-out infinite;
 }
 
 #mona {

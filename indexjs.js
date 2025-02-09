@@ -22,23 +22,23 @@ function logoClick() {
     window.open("index.html", "_self");
 }
 
-function volumeChange() {
-    var speaker = document.getElementById("speaker");
-
-    if (speaker.src.endsWith("assets/gifs/speaker.gif")) {
-        audio.volume = 0.5;
-        speaker.src = "assets/gifs/speaker50.gif";
-    } else if (speaker.src.endsWith("assets/gifs/speaker50.gif")) {
-        audio.volume = 0.25;
-        speaker.src = "assets/gifs/speaker25.gif";
-    } else if (speaker.src.endsWith("assets/gifs/speaker25.gif")) {
-        audio.volume = 1.0;
-        speaker.src = "assets/gifs/speaker.gif";
-    } else {
-        audio.volume = 1.0;
-        speaker.src = "assets/gifs/speaker.gif";
-    }
-}
+//function volumeChange() {
+//    var speaker = document.getElementById("speaker");
+//
+//    if (speaker.src.endsWith("assets/gifs/speaker.gif")) {
+//        audio.volume = 0.5;
+//        speaker.src = "assets/gifs/speaker50.gif";
+//    } else if (speaker.src.endsWith("assets/gifs/speaker50.gif")) {
+//        audio.volume = 0.25;
+//        speaker.src = "assets/gifs/speaker25.gif";
+//    } else if (speaker.src.endsWith("assets/gifs/speaker25.gif")) {
+//        audio.volume = 1.0;
+//        speaker.src = "assets/gifs/speaker.gif";
+//    } else {
+//        audio.volume = 1.0;
+//        speaker.src = "assets/gifs/speaker.gif";
+//    }
+//}
 
 const songs = ["pulsewidth", "poji", "ape", "pikmin", "sniping", "heart"];
 let currentSongIndex = 0;
@@ -152,3 +152,8 @@ function song6Click() {
     currentSongIndex = 5;
     changeSong();
 }
+
+document.getElementById("volume").addEventListener("input", function () {
+    let currentSong = document.getElementById(songs[currentSongIndex]);
+    currentSong.volume = this.value / 100;
+});

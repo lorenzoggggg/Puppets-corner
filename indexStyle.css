@@ -241,13 +241,20 @@ header {
     animation: windowBob 4.5s ease-in-out infinite;
 }
 
-#speaker {
+#volumeSlider {
+    position: absolute;
+    top: 1.5%;
+    left: 5%;
+    animation: windowBob 5s ease-in-out infinite;
+}
+
+/*#speaker {
     position: absolute;
     top: 1.5%;
     left: 5%;
     width: 20%;
     animation: windowBob 5s ease-in-out infinite;
-}
+}*/
 
 #mona {
     position: relative;

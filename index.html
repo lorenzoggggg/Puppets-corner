@@ -78,7 +78,10 @@
             <img src="assets/images/pulswidth.jpg" id="trackPic">
             <img src="assets/mediaPlayer/mediaplayer1.svg" id="kitty">
             <img src="assets/gifs/djmaicon.gif" id="djmaicon">
-            <img src="assets/gifs/speaker.gif" id="speaker" onclick="volumeChange()">
+            <!--<img src="assets/gifs/speaker.gif" id="speaker" onclick="volumeChange()">-->
+            <div id="volumeSlider">
+                <input type="range" min="0" max="100" value="50" id="volume">
+            </div>
             <div id="tracks">
                 <p id="song1" onclick="song1Click()">1. Aphex Twin - Pulsewidth</p>
                 <p id="song2" onclick="song2Click()">2. Serani Poji - Spiral Da-Hi!</p>

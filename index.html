@@ -78,7 +78,7 @@
             <img src="assets/images/pulswidth.jpg" id="trackPic">
             <img src="assets/mediaPlayer/mediaplayer1.svg" id="kitty">
             <img src="assets/gifs/djmaicon.gif" id="djmaicon">
-            <img src="assets/gifs/speaker.gif" id="speaker">
+            <img src="assets/gifs/speaker.gif" id="speaker" onclick="volumeChange()">
             <div id="tracks">
                 <p id="song1" onclick="song1Click()">1. Aphex Twin - Pulsewidth</p>
                 <p id="song2" onclick="song2Click()">2. Serani Poji - Spiral Da-Hi!</p>
@@ -89,16 +89,13 @@
             </div>
         </leftwindows>
         <righttwindows id="bookContainer">
-            <div class="guestbook-wrapper"></div>
                 <img src="assets/images/window1.PNG" id="guestbook">
                 <img src="assets/gifs/whitefuzzbox.png" id="fuzzBox">
                 <img src="assets/gifs/guestbook_clr.gif" id="bookTitle">
+                <audio id="yahoo" src="./assets/audio/webkinz yoohoo.mp3" preload="auto"></audio>
+                <img src="assets/images/himeow.GIF" id="wave" onclick="yahooClick()">
             </div>
         </rightwindows>
-        <div id="waver">
-            <audio id="yahoo" src="./assets/audio/webkinz yoohoo.mp3" preload="auto"></audio>
-            <img src="assets/images/himeow.GIF" id="wave" onclick="yahooClick()">
-        </div>
         <div id="maintxt">
             <p id="hithere">Hi there!!!!!</p>
             <p id="intro">I'm puppet/puppetizer/pupp3t1z3r, an artist that loves outdated memes and cats! ! !<br/>welcome to my website! ! Have fun looking around!<br/>

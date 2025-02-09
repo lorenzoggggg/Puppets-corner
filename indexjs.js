@@ -43,6 +43,22 @@ function logoClick() {
 const songs = ["pulsewidth", "poji", "ape", "pikmin", "sniping", "heart"];
 let currentSongIndex = 0;
 
+document.addEventListener("DOMContentLoaded", function() {
+    let volumeSlider = document.getElementById("volume");
+    let initialVolume = (volumeSlider.value / volumeSlider.max) * 0.5;
+    let currentSong = document.getElementById(songs[currentSongIndex]);
+    currentSong.volume = initialVolume;
+    currentVolume = currentSong.volume;
+});
+
+document.getElementById("volume").addEventListener("input", function () {
+    let currentSong = document.getElementById(songs[currentSongIndex]);
+
+    currentSong.volume = (this.value / this.max) * 0.5;
+    currentVolume = currentSong.volume;
+});
+
+
 function togglePlayPause() {
     let playbtn = document.getElementById("play");
     let currentSong = document.getElementById(songs[currentSongIndex]);
@@ -82,6 +98,8 @@ function changeSong() {
 
     currentSong.currentTime = 0;
     currentSong.play();
+
+    currentSong.volume = currentVolume;
 
     playbtn.src = "assets/mediaPlayer/mediaplayer_pause.png";
 
@@ -153,7 +171,22 @@ function song6Click() {
     changeSong();
 }
 
-document.getElementById("volume").addEventListener("input", function () {
-    let currentSong = document.getElementById(songs[currentSongIndex]);
-    currentSong.volume = this.value / 100;
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("buttonBanner");
+    
+    // Duplicate the buttons inside the banner for smooth looping
+    banner.innerHTML += banner.innerHTML;
+
+    // Start animation using requestAnimationFrame
+    let offset = 0;
+    function moveBanner() {
+        offset -= 1; // Adjust speed if needed
+        if (offset <= -banner.scrollWidth / 2) {
+            offset = 0; // Reset at halfway point
+        }
+        banner.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(moveBanner);
+    }
+
+    moveBanner();
 });

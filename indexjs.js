@@ -174,15 +174,13 @@ function song6Click() {
 document.addEventListener("DOMContentLoaded", function () {
     const banner = document.getElementById("buttonBanner");
     
-    // Duplicate the buttons inside the banner for smooth looping
     banner.innerHTML += banner.innerHTML;
 
-    // Start animation using requestAnimationFrame
     let offset = 0;
     function moveBanner() {
-        offset -= 1; // Adjust speed if needed
+        offset -= 1;
         if (offset <= -banner.scrollWidth / 2) {
-            offset = 0; // Reset at halfway point
+            offset = 0;
         }
         banner.style.transform = `translateX(${offset}px)`;
         requestAnimationFrame(moveBanner);
@@ -190,3 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     moveBanner();
 });
+
+//fetch("counter.php")
+//    .then(response => response.text())
+//    .then(data => {
+//        document.getElementById("visitorCount").innerText = data;
+//    })
+//    .catch(error => console.error("Error fetching visitor count:", error));

@@ -379,10 +379,8 @@ header {
 
 .counter {
     position: absolute;
-    height: 150%;
     top: 91%;
     left: 45.1%;
-
 }
 
 @keyframes logoSpin {

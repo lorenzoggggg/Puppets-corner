@@ -361,24 +361,28 @@ header {
 #ur {
     position: absolute;
     font-family: 'runescape';
+    color: #ffff00;
     font-size: 30px;
     top: 90%;
-    left: 31%;
+    left: 36%;
+    animation: textWave1 1.3s ease infinite;
 }
+
 
 #vstr {
     position: absolute;
     font-family: 'runescape';
+    color: #ffff00;
     font-size: 30px;
     top: 90%;
-    left: 51%;
+    left: 56%;
 }
 
 .counter {
     position: absolute;
     height: 150%;
     top: 91%;
-    left: 40%;
+    left: 45.1%;
 
 }
 

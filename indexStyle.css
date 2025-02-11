@@ -322,11 +322,11 @@ header {
 
 .carousel-wrapper {
     overflow: hidden;
-    width: 475%;
+    width: 95%;
     position: absolute;
     display: flex;
-    margin-top: 590%;
-    margin-right: 403%;
+    margin-top: 126%;
+    margin-left: 2.5%;
 }
 
 #buttonBanner {
@@ -356,6 +356,11 @@ header {
     background: url('assets/gifs/mc.gif');
     background-size: cover;
     border: none;
+}
+
+.counter {
+    position: absolute;
+    height: 100%;
 }
 
 @keyframes logoSpin {

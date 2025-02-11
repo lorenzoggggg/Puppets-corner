@@ -358,9 +358,28 @@ header {
     border: none;
 }
 
+#ur {
+    position: relative;
+    font-family: 'runescape';
+    font-size: 25px;
+    left: -20%;
+    top: -1;
+}
+
+#vstr {
+    position: relative;
+    font-family: 'runescape';
+    font-size: 25px;
+    left: 200%;
+    top: -1.75%;
+}
+
 .counter {
     position: absolute;
-    height: 100%;
+    height: 150%;
+    margin-top: 120%;
+    margin-left: 40%;
+
 }
 
 @keyframes logoSpin {

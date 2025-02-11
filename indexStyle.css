@@ -96,7 +96,7 @@ header {
     height: auto;
     position: absolute;
     top: 10%;
-    left: 96.5%;
+    right: 102%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,8 +146,8 @@ header {
 
 #leftwindows {
     position: absolute;
-    left: -22%;
-    top: 13%;
+    left: 92%;
+    top: 10%;
     width: 300px;
     height: auto;
     display: flex;

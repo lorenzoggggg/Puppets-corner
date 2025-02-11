@@ -372,7 +372,7 @@ header {
     color: #ffff00;
     font-size: 30px;
     top: 87%;
-    left: 36%;
+    left: 30.5%;
 }
 
 
@@ -382,13 +382,13 @@ header {
     color: #ffff00;
     font-size: 30px;
     top: 87%;
-    left: 56%;
+    left: 61%;
 }
 
 .counter {
     position: absolute;
-    top: 86%;
-    left: 45.1%;
+    top: 88.5%;
+    left: 44.1%;
 }
 
 @keyframes logoSpin {

@@ -359,26 +359,26 @@ header {
 }
 
 #ur {
-    position: relative;
+    position: absolute;
     font-family: 'runescape';
-    font-size: 25px;
-    left: -20%;
-    top: -1;
+    font-size: 30px;
+    top: 90%;
+    left: 30%;
 }
 
 #vstr {
-    position: relative;
+    position: absolute;
     font-family: 'runescape';
-    font-size: 25px;
-    left: 200%;
-    top: -1.75%;
+    font-size: 30px;
+    top: 90%;
+    left: 60%;
 }
 
 .counter {
     position: absolute;
     height: 150%;
-    margin-top: 120%;
-    margin-left: 40%;
+    top: 120%;
+    left: 40%;
 
 }
 

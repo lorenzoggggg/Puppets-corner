@@ -189,6 +189,35 @@ document.addEventListener("DOMContentLoaded", function () {
     moveBanner();
 });
 
+window.onload = function() {
+    clearFields();
+};
+
+function clearFields() {
+    document.getElementById("name").value = "";
+    document.getElementById("message").value = "";
+}
+
+function postMessage() {
+    let name = document.getElementById("name").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    if (name === "" && message === "") {
+        window.alert("The fields are empty, dummy...");
+    }
+    else if (name === "") {
+        window.alert("Don't you have a name?");
+    }
+    else if (message === "") {
+        window.alert("Can't send a blank letter, can you?");
+    }
+    else {
+        document.getElementById("name").value = "";
+        document.getElementById("message").value = "";
+        window.alert("Thank you for your message!! :3");
+    }
+}
+
 //fetch("counter.php")
 //    .then(response => response.text())
 //    .then(data => {

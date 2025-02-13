@@ -143,6 +143,32 @@ header {
     animation: windowBob 5.5s ease-in-out infinite;
 }
 
+#name {
+    position: absolute;
+    font-family: 'runescape';
+    font-size: 20px;
+    top: 80%;
+    left: -10%;
+    animation: windowBob 5.5s ease-in-out infinite;
+}
+
+#message {
+    position: absolute;
+    font-family: 'runescape';
+    font-size: 20px;
+    width: 100%;
+    top: 85%;
+    left: -10%;
+    animation: windowBob 5.5s ease-in-out infinite;
+}
+
+#post {
+    height: 80px;
+    position: absolute;
+    top: 82%;
+    left: 100%;
+    animation: windowBob 5.5s ease-in-out infinite;
+}
 
 #leftwindows {
     position: absolute;

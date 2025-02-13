@@ -232,9 +232,9 @@ header {
 }
 
 #kitty {
-    height: 60%;
+    height: 58%;
     position: absolute;
-    top: -14%;
+    top: -12%;
     left: 50%;
     animation: windowBob 4.75s ease-in-out infinite;
 }

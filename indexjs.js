@@ -7,15 +7,29 @@ window.onload = function () {
 
 function yahooClick() {
     var yahoo = document.getElementById("yahoo");
+    yahoo.volume = 0.5;
     yahoo.play();
 }
 
 function meowClick() {
     var meow = document.getElementById("meow");
+    meow.volume = 0.5;
     meow.play();
     //setTimeout(function() {
     //window.open("catPage.html", "_self");
     //}, 1000);
+}
+
+function kitty1Click() {
+    var pouik = document.getElementById("pouik");
+    pouik.volume = 0.5;
+    pouik.play();
+}
+
+function kitty2Click() {
+    var grin = document.getElementById("grin");
+    grin.volume = 0.5;
+    grin.play();
 }
 
 function logoClick() {
@@ -201,7 +215,10 @@ function clearFields() {
 function postMessage() {
     let name = document.getElementById("name").value.trim();
     let message = document.getElementById("message").value.trim();
+    var postMeow = document.getElementById("postMeow");
+    postMeow.volume = 0.5;
 
+    postMeow.play();
     if (name === "" && message === "") {
         window.alert("The fields are empty, dummy...");
     }
